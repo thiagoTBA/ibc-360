@@ -1,4 +1,4 @@
-# IBC 360 V19 — antes de publicar
+# IBC 360 V20 — antes de publicar
 
 Esta versão está sincronizada com o **Edital CETAM/DAC n.º 009/2026 oficial**, publicado em 14/08/2026.
 
@@ -10,4 +10,4 @@ Esta versão está sincronizada com o **Edital CETAM/DAC n.º 009/2026 oficial**
 - contato oficial do IBC constante no edital;
 - fluxo de inscrição, pré-inscrição e confirmação presencial da matrícula.
 
-O catálogo não realiza inscrição, matrícula ou reserva de vaga. Em caso de divergência, prevalecem o edital e os canais oficiais do CETAM.
+O IBC 360 não realiza inscrição, matrícula ou reserva de vaga. Em caso de divergência, prevalecem o edital e os canais oficiais do CETAM.

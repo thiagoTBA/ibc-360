@@ -29,7 +29,7 @@ function card(course) {
   article.className = "course-card";
   article.dataset.courseId = course.turma_id;
   article.dataset.versionStatus = info.status;
-  article.innerHTML = `<div class="course-card-top"><div class="tags"><span class="tag turno">${esc(course.turno)}</span><span class="tag">${esc(course.carga_publica)}</span><span class="tag ok">${esc(course.vagas_publicas)} vagas</span></div>${favoriteButton(course)}</div>${labels.badge(info)}<h3>${esc(info.public_title)}</h3><p class="course-public-subtitle">${esc(info.subtitle)}</p><p class="card-summary">${esc(course.resumo_aluno)}</p>${requirements(course)}<div class="mini-meta"><span><strong>Horário:</strong> ${esc(course.horario || "Consulte o edital")}</span><span><strong>Período:</strong> ${esc(course.inicio_publico)} a ${esc(course.termino_publico)}</span><span><strong>Ambiente:</strong> ${esc(course.ambiente)}</span><span><strong>Exigência:</strong> ${esc(course.nivel_exigencia)}</span></div><div class="tags"><span class="tag">${esc(course.area)}</span></div><div class="card-footer"><a class="btn btn-accent" href="${esc(course.pagina)}">Ver curso</a><a class="btn btn-soft" data-portal-link href="${esc(cfg.portalInscricaoUrl || "https://inscricao.cetam.am.gov.br/")}" target="_blank" rel="noopener">Portal Oficial</a></div>`;
+  article.innerHTML = `<div class="course-card-top"><div class="tags"><span class="tag turno">${esc(course.turno)}</span><span class="tag">${esc(course.carga_publica)}</span><span class="tag ok">${esc(course.vagas_publicas)} vagas</span></div>${favoriteButton(course)}</div>${labels.badge(info)}<h3>${esc(info.public_title)}</h3><p class="course-public-subtitle">${esc(info.subtitle)}</p><p class="card-summary">${esc(course.resumo_aluno)}</p>${requirements(course)}<div class="mini-meta"><span><strong>Horário:</strong> ${esc(course.horario || "Consulte o edital")}</span><span><strong>Período:</strong> ${esc(course.inicio_publico)} a ${esc(course.termino_publico)}</span><span><strong>Ambiente:</strong> ${esc(course.ambiente)}</span></div><div class="tags"><span class="tag">${esc(course.area)}</span></div><div class="card-footer"><a class="btn btn-accent" href="${esc(course.pagina)}">Ver curso</a><a class="btn btn-soft" data-portal-link href="${esc(cfg.portalInscricaoUrl || "https://inscricao.cetam.am.gov.br/")}" target="_blank" rel="noopener">Portal Oficial</a></div>`;
   return article;
 }
 function match(course) {
@@ -39,7 +39,6 @@ function match(course) {
   return (!query || haystack.includes(query))
     && (!$("#turno").value || course.turno === $("#turno").value)
     && (!$("#area").value || course.area === $("#area").value)
-    && (!$("#nivel").value || course.nivel_exigencia === $("#nivel").value)
     && (!$("#versao").value || info.status === $("#versao").value)
     && (!somenteSalvos || favoritos.has(course.turma_id));
 }
@@ -57,14 +56,14 @@ function render() {
   if (!items.length) $("#grid").innerHTML = somenteSalvos ? '<div class="empty-state"><strong>Nenhum curso salvo.</strong><p>Use o coração nos cards para guardar suas opções e comparar depois.</p></div>' : '<p class="muted">Nenhuma turma encontrada com esses filtros.</p>';
   updateFavoritesButton();
 }
-fill($("#turno"), uniq("turno")); fill($("#area"), uniq("area")); fill($("#nivel"), uniq("nivel_exigencia"));
+fill($("#turno"), uniq("turno")); fill($("#area"), uniq("area"));
 const metrics = meta.metricas || {}; $("#mTurmas").textContent = metrics.turmas || 0; $("#mCursos").textContent = metrics.cursos_unicos || 0; $("#mVagas").textContent = metrics.vagas || 0;
-["#busca", "#turno", "#area", "#nivel", "#versao"].forEach(selector => { $(selector)?.addEventListener("input", render); $(selector)?.addEventListener("change", render); });
-$("#limpar").addEventListener("click", () => { ["#busca", "#turno", "#area", "#nivel", "#versao"].forEach(selector => { if ($(selector)) $(selector).value = ""; }); somenteSalvos = false; render(); });
+["#busca", "#turno", "#area", "#versao"].forEach(selector => { $(selector)?.addEventListener("input", render); $(selector)?.addEventListener("change", render); });
+$("#limpar").addEventListener("click", () => { ["#busca", "#turno", "#area", "#versao"].forEach(selector => { if ($(selector)) $(selector).value = ""; }); somenteSalvos = false; render(); });
 $("#favoritesFilter")?.addEventListener("click", () => { somenteSalvos = !somenteSalvos; render(); });
 $("#grid").addEventListener("click", event => { const button = event.target.closest("[data-favorite-id]"); if (!button) return; const c=cursos.find(x=>x.turma_id===button.dataset.favoriteId); const state=favoritos.toggle(button.dataset.favoriteId); analytics.track("favorite_toggle",{course_id:c?.turma_id,course_name:c?.nome_curso,turno:c?.turno,meta:{saved:state}}); render(); });
 window.addEventListener("ibc360:favoritos", render); render();
 
 let searchTimer;
 $("#busca")?.addEventListener("input", () => { clearTimeout(searchTimer); searchTimer=setTimeout(()=>analytics.track("catalog_search",{meta:{used:Boolean($("#busca").value),results:cursos.filter(match).length}}),700); });
-[["turno","#turno"],["area","#area"],["nivel","#nivel"],["versao","#versao"]].forEach(([key,sel])=>$(sel)?.addEventListener("change",()=>analytics.track("catalog_filter",{meta:{filter:key,value:$(sel).value||"todos"}})));
+[["turno","#turno"],["area","#area"],["versao","#versao"]].forEach(([key,sel])=>$(sel)?.addEventListener("change",()=>analytics.track("catalog_filter",{meta:{filter:key,value:$(sel).value||"todos"}})));

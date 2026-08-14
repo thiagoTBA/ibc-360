@@ -3,7 +3,7 @@ window.CONECTA_CONFIG = {
   oferta: "3ª Oferta 2026",
   fase: "auto",
 
-  // V19: edital oficial integrado + experiência completa + camada de serviço de consulta durante o período eleitoral.
+  // V20: edital oficial integrado + revisão de vídeos externos + comunicação pública simplificada.
   modoDefesoEleitoral: true,
   mostrarGrupoWhatsapp: false,
   mostrarAmbientesEstudo: true,

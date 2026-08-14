@@ -45,9 +45,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Exercícios de produtividade",
       "Resolução de tarefas do cotidiano profissional"
     ],
-    "video": "JdSTF0iYYhI",
-    "video_title": "Informática — fundamentos para avançar",
-    "video_channel": "Prime Cursos do Brasil"
   },
   "WEB DESIGNER": {
     "theme": "creative",
@@ -96,9 +93,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Resolução de problemas com fórmulas",
       "Análise e apresentação de dados"
     ],
-    "video": "XV6pgF0uQxM",
-    "video_title": "Dados, relatórios e visualização: introdução ao Power BI",
-    "video_channel": "Prime Cursos do Brasil"
+    "video": "nMpH7k0NPeI",
+    "video_title": "O que é Excel Avançado? O que aprender para chegar ao nível avançado",
+    "video_channel": "Hashtag Treinamentos"
   },
   "POWER BI": {
     "theme": "data",
@@ -147,9 +144,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Atividades de organização e produtividade",
       "Desenvolvimento gradual de autonomia digital"
     ],
-    "video": "JdSTF0iYYhI",
-    "video_title": "Informática — entendendo o computador e seus recursos",
-    "video_channel": "Prime Cursos do Brasil"
   },
   "INGLÊS BÁSICO": {
     "theme": "language",
@@ -172,9 +166,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Exercícios de escuta e pronúncia",
       "Leitura e escrita de frases simples"
     ],
-    "video": "ls0y4PqAAs0",
-    "video_title": "A importância do inglês no mercado de trabalho",
-    "video_channel": "Inglês 200 horas"
+    "video": "rrUBcqRJFHI",
+    "video_title": "Introdução e Names — Inglês Curso Gratuito Completo — Aula 01",
+    "video_channel": "Kultivi"
   },
   "INGLÊS INTERMEDIÁRIO": {
     "theme": "language",
@@ -197,9 +191,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Compreensão de áudios e textos",
       "Produção oral e escrita"
     ],
-    "video": "ls0y4PqAAs0",
-    "video_title": "A importância do inglês no mercado de trabalho",
-    "video_channel": "Inglês 200 horas"
+    "video": "q_jBiCI9sf8",
+    "video_title": "Nível 14 — Aula 1 — Inglês Intermediário",
+    "video_channel": "Abcfluent"
   },
   "ESPANHOL BÁSICO": {
     "theme": "language",
@@ -222,9 +216,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Exercícios de pronúncia",
       "Leitura e produção de frases simples"
     ],
-    "video": "ls0y4PqAAs0",
-    "video_title": "Idiomas e mercado de trabalho",
-    "video_channel": "Inglês 200 horas"
+    "video": "fshhKie6Yqs",
+    "video_title": "Presentación del Curso — Curso de Espanhol",
+    "video_channel": "Kultivi"
   },
   "AGENTE DE PORTARIA": {
     "theme": "services",
@@ -248,9 +242,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Registro de ocorrências e informações",
       "Comunicação com setores responsáveis"
     ],
-    "video": "JdSTF0iYYhI",
-    "video_title": "Tecnologia e organização no ambiente de trabalho",
-    "video_channel": "Prime Cursos do Brasil"
   },
   "PROFISSIONAL DE APOIO ESCOLAR (PAE)": {
     "theme": "education",
@@ -273,9 +264,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Simulações de situações escolares",
       "Planejamento de apoio e comunicação"
     ],
-    "video": "p33lQqS1PnY",
-    "video_title": "Tecnologia, aprendizagem e inclusão: novas possibilidades",
-    "video_channel": "Curso em Vídeo"
   },
   "INTRODUÇÃO À INTELIGÊNCIA ARTIFICIAL": {
     "theme": "ai",
@@ -348,9 +336,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Simulações e registros",
       "Discussão de ética, limites e atuação supervisionada"
     ],
-    "video": "p33lQqS1PnY",
-    "video_title": "Tecnologia e novas possibilidades de aprendizagem",
-    "video_channel": "Curso em Vídeo"
   },
   "LEITURA E INTERPRETAÇÃO DE COMPONENTES ELETRÔNICOS": {
     "theme": "electronics",
@@ -373,9 +358,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Leitura de valores e símbolos",
       "Atividades práticas em bancada"
     ],
-    "video": "7-hHJQD4fRY",
-    "video_title": "Tecnologia conectada e componentes no cotidiano",
-    "video_channel": "LearnFree em Português"
+    "video": "C54Cp819Ebc",
+    "video_title": "Como funcionam os componentes eletrônicos?",
+    "video_channel": "Manual do Mundo"
   },
   "CONTROLE DE DESCARGA ELETROSTÁTICA (ESD)": {
     "theme": "electronics",
@@ -398,9 +383,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Identificação de riscos",
       "Aplicação de procedimentos técnicos"
     ],
-    "video": "7-hHJQD4fRY",
-    "video_title": "Tecnologia e dispositivos conectados",
-    "video_channel": "LearnFree em Português"
+    "video": "29xo5FNRrgA",
+    "video_title": "ESD — Descargas Eletrostáticas",
+    "video_channel": "Newton C. Braga"
   },
   "INSPETOR DA QUALIDADE": {
     "theme": "quality",
@@ -473,9 +458,9 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Leitura de diagramas",
       "Testes e identificação de falhas"
     ],
-    "video": "7-hHJQD4fRY",
-    "video_title": "Tecnologia, dispositivos e automação",
-    "video_channel": "LearnFree em Português"
+    "video": "FVLmJIKKcJM",
+    "video_title": "O que são comandos elétricos?",
+    "video_channel": "Mundo da Elétrica"
   },
   "ELETRICIDADE BÁSICA": {
     "theme": "industrial",
@@ -498,9 +483,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Montagem de circuitos",
       "Leitura de diagramas e práticas de segurança"
     ],
-    "video": "7-hHJQD4fRY",
-    "video_title": "Tecnologia e circuitos no cotidiano",
-    "video_channel": "LearnFree em Português"
   },
   "CUIDADOR DE IDOSOS": {
     "theme": "care",
@@ -574,9 +556,6 @@ window.IBC360_COURSE_EXPERIENCE = {
       "Testes em emuladores ou dispositivos",
       "Desenvolvimento de projeto prático"
     ],
-    "video": "548M7WF3gj8",
-    "video_title": "Programação: lógica e primeiros conceitos",
-    "video_channel": "Trybe"
   },
   "INTERNET DAS COISAS": {
     "theme": "iot",

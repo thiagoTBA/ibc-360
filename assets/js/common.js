@@ -52,7 +52,7 @@
       banner.innerHTML = `
         <div class="service-consult-copy">
           <strong>3ª Oferta 2026 — Serviço de consulta</strong>
-          <span>Este catálogo apresenta informações para auxiliar candidatos na consulta e escolha dos cursos. As inscrições são realizadas exclusivamente pelo Portal do Candidato do CETAM. Em caso de divergência, prevalecem as informações constantes no edital.</span>
+          <span>Esta página reúne informações para auxiliar candidatos na consulta e escolha dos cursos ofertados no IBC. As inscrições são realizadas exclusivamente pelo Portal do Candidato do CETAM. Em caso de divergência, prevalecem as informações constantes no edital.</span>
         </div>
         <div class="service-consult-actions">
           <a class="service-link" href="${cfg.editaisUrl || '#'}" target="_blank" rel="noopener">Consultar edital</a>
@@ -139,7 +139,7 @@
     aulas: {
       label: '3ª Oferta 2026',
       title: 'Consulte informações da sua turma.',
-      text: 'As aulas iniciam a partir de 31/08/2026. Use o catálogo para conferir horário, ambiente, carga horária e demais informações.',
+      text: 'As aulas iniciam a partir de 31/08/2026. Use o IBC 360 para conferir horário, ambiente, carga horária e demais informações.',
       action: 'Ver cursos', target: 'cursos'
     }
   };
