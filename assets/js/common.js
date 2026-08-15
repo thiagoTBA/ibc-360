@@ -31,6 +31,47 @@
   });
   apply();
 
+  // V20.1: menu mobile compacto. No desktop, a navegação continua aberta.
+  const mainNav = document.querySelector('.nav');
+  const mainNavLinks = mainNav?.querySelector('.nav-links');
+  if (mainNav && mainNavLinks && !mainNav.querySelector('.nav-toggle')) {
+    if (!mainNavLinks.id) mainNavLinks.id = 'menu-principal-links';
+    const toggle = document.createElement('button');
+    toggle.className = 'nav-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', mainNavLinks.id);
+    toggle.setAttribute('aria-label', 'Abrir menu principal');
+    toggle.innerHTML = '<span class="nav-toggle-icon" aria-hidden="true"><span></span></span><span class="nav-toggle-label">Menu</span>';
+    mainNav.insertBefore(toggle, mainNavLinks);
+    mainNav.classList.add('js-nav-ready');
+
+    const setMenuOpen = open => {
+      mainNav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu principal' : 'Abrir menu principal');
+      const label = toggle.querySelector('.nav-toggle-label');
+      if (label) label.textContent = open ? 'Fechar' : 'Menu';
+    };
+
+    toggle.addEventListener('click', () => setMenuOpen(!mainNav.classList.contains('is-open')));
+    mainNavLinks.addEventListener('click', event => {
+      if (event.target.closest('a') && window.matchMedia('(max-width: 620px)').matches) setMenuOpen(false);
+    });
+    document.addEventListener('click', event => {
+      if (mainNav.classList.contains('is-open') && !mainNav.contains(event.target)) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && mainNav.classList.contains('is-open')) {
+        setMenuOpen(false);
+        toggle.focus();
+      }
+    });
+    window.addEventListener('resize', () => {
+      if (!window.matchMedia('(max-width: 620px)').matches) setMenuOpen(false);
+    });
+  }
+
   const setHref = (selector, href) => document.querySelectorAll(selector).forEach(el => { if (href) el.href = href; });
   setHref('[data-portal-link]', cfg.portalInscricaoUrl);
   setHref('[data-editais-link]', cfg.editaisUrl);

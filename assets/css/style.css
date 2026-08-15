@@ -201,3 +201,87 @@ body.modo-defeso .course-version-badge.new{box-shadow:none}body.modo-defeso .cou
 
 /* V20 — revisão de vídeos e simplificação dos dados públicos */
 .video-youtube-link{display:inline-flex;margin-top:10px;color:var(--primary);font-weight:850;text-decoration:none}.video-youtube-link:hover{text-decoration:underline}.single-detail{grid-template-columns:1fr}
+
+
+/* ===== V20.1: navegação mobile compacta ===== */
+.nav-toggle{display:none}
+@media(max-width:620px){
+  .nav.js-nav-ready{
+    flex-direction:row;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:0;
+    min-height:64px;
+    padding:10px 16px;
+  }
+  .nav.js-nav-ready .brand{
+    font-size:1.45rem;
+    line-height:1;
+  }
+  .nav-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-left:auto;
+    min-height:42px;
+    padding:8px 13px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    background:#fff;
+    color:var(--primary);
+    font-weight:850;
+    cursor:pointer;
+  }
+  .nav-toggle-icon{
+    position:relative;
+    width:18px;
+    height:12px;
+    display:inline-block;
+  }
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after,
+  .nav-toggle-icon span{
+    content:"";
+    position:absolute;
+    left:0;
+    width:18px;
+    height:2px;
+    border-radius:2px;
+    background:currentColor;
+    transition:transform .18s ease,top .18s ease,opacity .18s ease;
+  }
+  .nav-toggle-icon::before{top:0}
+  .nav-toggle-icon span{top:5px}
+  .nav-toggle-icon::after{top:10px}
+  .nav.js-nav-ready .nav-links{
+    display:none;
+    width:100%;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4px 8px;
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid var(--border);
+  }
+  .nav.js-nav-ready.is-open .nav-links{display:grid}
+  .nav.js-nav-ready .nav-links a{
+    display:flex;
+    align-items:center;
+    min-height:42px;
+    padding:8px 10px;
+    border-radius:10px;
+    font-size:.92rem;
+    line-height:1.2;
+  }
+  .nav.js-nav-ready .nav-links a.external-link{
+    grid-column:1/-1;
+    justify-content:center;
+    margin-top:3px;
+    background:var(--surface-soft);
+    border:1px solid #cfe0fa;
+  }
+  .nav.js-nav-ready.is-open .nav-toggle-icon::before{top:5px;transform:rotate(45deg)}
+  .nav.js-nav-ready.is-open .nav-toggle-icon span{opacity:0}
+  .nav.js-nav-ready.is-open .nav-toggle-icon::after{top:5px;transform:rotate(-45deg)}
+  body.high-contrast .nav-toggle{background:#000;color:#fff;border-color:#fff}
+}
